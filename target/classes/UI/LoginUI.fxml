@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="575.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginUIController">
+   <children>
+      <Label layoutX="125.0" prefHeight="47.0" prefWidth="325.0" text="Sign in to Get Started" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnLogin" fx:id="btnLogin" layoutX="50.0" layoutY="221.0" onAction="#login" prefHeight="42.0" prefWidth="475.0" stylesheets="@../css/Button_GS_Style.css" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></JFXButton>
+      <TextField fx:id="tfUser" layoutX="50.0" layoutY="90.0" prefHeight="45.0" prefWidth="475.0" promptText="Email or phone number" stylesheets="@../css/Login.css" />
+      <PasswordField fx:id="pfPassword" layoutX="50.0" layoutY="145.0" prefHeight="45.0" prefWidth="475.0" promptText="Password" stylesheets="@../css/Login.css" />
+      <JFXButton id="btnForgotPassword" fx:id="btnForgotPassword" layoutX="50.0" layoutY="290.0" stylesheets="@../css/Button_GS_Style.css" text="Forgot your password?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="btnCreate" fx:id="btnCreate" layoutX="166.0" layoutY="489.0" onMouseClicked="#gotoRegister" prefHeight="42.0" prefWidth="243.0" stylesheets="@../css/Button_GS_Style.css" text="Create new account">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

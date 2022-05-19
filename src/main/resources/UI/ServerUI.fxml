@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServerUIController">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="90.0" style="-fx-background-color: #1D232A;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="94.0" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: #272e36;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="WHITE" glyphName="HOME" layoutX="27.0" layoutY="142.0" size="36" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="90.0" prefHeight="800.0" prefWidth="1190.0" style="-fx-background-color: #272e36;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="tfPort" layoutX="165.0" layoutY="25.0" prefHeight="35.0" prefWidth="180.0" promptText="Port here" stylesheets="@../css/MainStyle.css">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="35.0" layoutY="25.0" prefHeight="35.0" prefWidth="110.0" text="Port running:" textFill="WHITE" AnchorPane.leftAnchor="35.0">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton id="btnStart" fx:id="btnStartServer" layoutX="375.0" layoutY="25.0" onMouseClicked="#startServer" prefHeight="35.0" prefWidth="100.0" stylesheets="@../css/MainStyle.css" text="Start" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXCheckBox fx:id="cbPortEditable" layoutX="500.0" layoutY="25.0" prefHeight="35.0" prefWidth="110.0" text="Editable" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </JFXCheckBox>
+            <Line endX="1020.0" layoutX="135.0" layoutY="80.0" startX="-100.0" stroke="#5e5e5e" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" />
+            <Label layoutX="35.0" layoutY="110.0" prefHeight="35.0" prefWidth="60.0" text="Status:" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbStatus" layoutX="110.0" layoutY="110.0" prefHeight="35.0" text="Stop" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="taServerNotice" editable="false" focusColor="WHITE" labelFloat="true" layoutX="35.0" layoutY="163.0" maxWidth="850.0" minWidth="850.0" prefColumnCount="35" prefHeight="500.0" prefWidth="850.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+#download {
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+#btnClose {
+    -fx-background-color: #e5e5e5;
+    -fx-background-radius: 100;
+}
+.button {
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+.button:pressed {
+    -fx-background-color: #dfdfdf !important;
+    -fx-background-radius: 100;
+}
+#btnLeft {
+
+}

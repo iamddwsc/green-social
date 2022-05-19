@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientUIController">
+   <children>
+      <AnchorPane fx:id="pane_to_drag2_client" prefHeight="40.0" prefWidth="390.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="860.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mini_logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane prefWidth="390.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Circle fx:id="cLoggedInUser" fill="#1eab5d" layoutX="40.0" layoutY="68.0" onMouseClicked="#OptionLoggedUser" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.topAnchor="15.0" />
+            <Label layoutX="143.0" layoutY="23.0" prefHeight="25.0" prefWidth="105.0" text="Messenger" AnchorPane.topAnchor="23.0">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField id="searchBox" layoutX="20.0" layoutY="100.0" prefHeight="40.0" prefWidth="350.0" promptText="Search" stylesheets="@../css/Login.css" AnchorPane.topAnchor="70.0" />
+            <VBox layoutY="150.0" prefHeight="750.0" prefWidth="390.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="750.0" prefWidth="390.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+                     <content>
+                        <JFXListView id="convoList" fx:id="convoList" prefHeight="750.0" prefWidth="390.0" style="-fx-background-color: transparent;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <Button id="newConvo" fx:id="btnNewConversation" layoutX="333.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#createNewConversation" prefHeight="24.0" prefWidth="24.0" stylesheets="@../css/MainStyle.css">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/edit_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_to_drag_client" prefHeight="40.0" prefWidth="710.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="btnClose" fx:id="btnClose" layoutX="663.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" stylesheets="@../css/Button_min_max_close.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <MaterialDesignIconView id="btnClose_icon" fx:id="btnClose_icon" glyphName="CLOSE" size="25" />
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Button id="btnMax" fx:id="btnMax" layoutX="606.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#max" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" stylesheets="@../css/Button_min_max_close.css" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView id="btnMax_icon" fx:id="btnMax_icon" glyphName="CROP_SQUARE" size="25" />
+               </graphic>
+            </Button>
+            <Button id="btnMin" fx:id="btnMin" layoutX="592.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#min" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" stylesheets="@../css/Button_min_max_close.css" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView id="btnMin_icon" fx:id="btnMin_icon" glyphName="MINUS" size="25" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="parentChatPane" layoutX="390.0" prefHeight="900.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <AnchorPane prefHeight="55.0" prefWidth="710.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lbSelectedConvo" layoutX="67.0" layoutY="5.0" prefHeight="31.0" text="Đức Võ">
+                     <font>
+                        <Font name="Segoe UI Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbStatusSelectedConvo" layoutX="67.0" layoutY="30.0" text="Active now">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="circleAvataSelectedConvo" fill="#1eab5d" layoutX="31.0" layoutY="28.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="8.0" />
+                  <Button fx:id="btnSearch" layoutX="649.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#search" style="-fx-background-color: transparent;" stylesheets="@../css/MainStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" size="25" />
+                     </graphic>
+                  </Button>
+                  <ImageView fx:id="ivMore" fitHeight="31.0" fitWidth="24.0" layoutX="712.0" layoutY="16.0" onMouseClicked="#more" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="16.0">
+                     <image>
+                        <Image url="@../images/vertical_dot_512px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="805.0" prefWidth="710.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" style="-fx-background-color: #fff;" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <JFXListView fx:id="chatPane" maxHeight="1.7976931348623157E308" prefHeight="730.0" prefWidth="710.0" style="-fx-background-color: #fff;" />
+                     </content>
+                  </ScrollPane>
+                  <TextArea fx:id="messageBox" layoutX="54.0" layoutY="551.0" prefRowCount="8" prefWidth="590.0" promptText="Type a message" stylesheets="@../css/MainStyle.css" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="66.0">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextArea>
+                  <Button id="btnOption" fx:id="btnOption" layoutX="11.0" layoutY="613.0" mnemonicParsing="false" onMouseClicked="#showOptions" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/MainStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+                     <graphic>
+                        <Circle fx:id="circleOption" fill="DODGERBLUE" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnOption" fx:id="btnSend" layoutX="654.0" layoutY="754.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="42.0" style="-fx-background-color: transparent;" stylesheets="@../css/MainStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#1eab5d" glyphName="SEND" size="22" translateX="-0.7" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnEmoji" fx:id="btnEmoji" layoutX="571.0" layoutY="753.0" mnemonicParsing="false" onMouseClicked="#showEmoji" prefHeight="20.0" prefWidth="20.0" stylesheets="@../css/MainStyle.css" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="75.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/smile_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="1.0" top="1.0" />
+                     </padding>
+                  </Button>
+                  <Button id="btnEmoji" fx:id="btnSticker" layoutX="581.0" layoutY="763.0" mnemonicParsing="false" onMouseClicked="#showSticker" prefHeight="20.0" prefWidth="20.0" stylesheets="@../css/MainStyle.css" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="110.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sticker_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="1.0" top="1.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneImageExpand" layoutY="40.0" />
+   </children>
+</AnchorPane>

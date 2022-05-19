@@ -1,0 +1,35 @@
+.text-field:focused {
+    -fx-border-color: #1eab5d !important;
+}
+.text-field:hover {
+    -fx-border-color: derive(#cdcdcd, -30%)
+}
+.text-field {
+    -fx-background-radius: 12.5;
+    -fx-background-color: #e5e5e5;
+    -fx-border-radius: 12.5;
+    -fx-border-width: 1px;
+    -fx-border-color: #e5e5e5;
+    -fx-font-size: 13pt;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-40%);
+}
+.no-prompt {
+    -fx-prompt-text-fill: transparent !important;
+}
+.radio-button {
+    -fx-rotate:180;
+    -fx-border-radius: 10;
+    -fx-border-width: 1px;
+    -fx-border-color: derive(#C2C2C2,-10%);
+    -fx-font-size: 16pt;
+    -fx-label-padding: 6px 6px 6px 25px;
+}
+.radio-button > .text {
+    -fx-rotate: 180;
+}
+.radio-button:pressed {
+    -fx-border-insets: 100%;
+}
+#searchBox {
+    -fx-font-family: "Segoe UI";
+}

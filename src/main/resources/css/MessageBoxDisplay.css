@@ -1,0 +1,24 @@
+.text-area {
+    -fx-background-radius: 20;
+    -fx-font-family: "MS Reference Sans Serif";
+    -fx-border-color: transparent;
+    -fx-border-insets: 0;
+    -fx-text-fill: white;
+    -fx-background-color: #1eab5d;
+}
+.text-area .content {
+    -fx-background-color: #1eab5d ;
+    -fx-background-radius: 0;
+}
+.text-area .content:hover {
+    -fx-background-color: #1eab5d !important ;
+}
+.text-area .content:focused {
+    -fx-background-color: #1eab5d !important ;
+}
+.text-area:hover {
+    -fx-border-color: #1eab5d !important;
+}
+.text-area:focused {
+    -fx-border-color: #1eab5d !important;
+}

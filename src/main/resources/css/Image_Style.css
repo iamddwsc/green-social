@@ -1,0 +1,9 @@
+
+#pane2 {
+    -fx-background-radius: 15;
+    -fx-background-color: #1eab5d;
+}
+#expand {
+    -fx-background-color: #cccccc;
+    -fx-background-radius: 100;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeUIController">
+   <children>
+      <Label layoutX="98.0" prefHeight="47.0" prefWidth="379.0" text="Welcome to Green Social" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="60.0" style="-fx-text-fill: #9b9b9b;" text="The simple way to chat with your friend from your desktop." textFill="#6a6d71">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnSignIn" fx:id="btnSignIn" buttonType="RAISED" layoutX="50.0" layoutY="420.0" onMouseClicked="#gotoLogin" prefHeight="42.0" prefWidth="475.0" ripplerFill="BLACK" stylesheets="@../css/Button_GS_Style.css" text="Sign in">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnSignUp" fx:id="btnSignUp" layoutX="50.0" layoutY="481.0" onMouseClicked="#gotoRegister" prefHeight="42.0" prefWidth="475.0" ripplerFill="BLACK" stylesheets="@../css/Button_GS_Style.css" text="Sign up">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

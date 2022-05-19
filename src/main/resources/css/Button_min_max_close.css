@@ -1,0 +1,11 @@
+#btnMin:hover, #btnMax:hover {
+    -fx-background-color: #1eab5d !important;
+}
+#btnClose:hover {
+    -fx-background-color: #ff311e !important;
+    -fx-text-fill: #e5e5e5 !important;
+}
+#btnClose:hover #btnClose_icon:hover{
+    -fx-background-color: #ff311e !important;
+    -fx-text-fill: #e5e5e5 !important;
+}

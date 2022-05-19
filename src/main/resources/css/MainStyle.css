@@ -1,0 +1,146 @@
+
+.root .text-field {
+    -fx-font-family: "Segoe UI";
+}
+.text-field {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #fff;
+    -fx-background-radius: 12.5;
+    -fx-text-fill: #000;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-40%);
+    -fx-border-color: #272e36;
+    -fx-border-radius: 12.5;
+    -fx-border-width: 1px;
+}
+.text-field:focused {
+    -fx-border-color: #1eab5d !important;
+}
+.text-field:hover {
+    -fx-border-color: derive(#cdcdcd, -30%)
+}
+.no-prompt {
+    -fx-prompt-text-fill: transparent !important;
+}
+#btnStart {
+    -fx-border-color: #1eab5d;
+}
+.text-area{
+    -fx-background-color: #f5f5f5;
+    -fx-border-radius: 30 30 30 30;
+    -fx-background-radius: 30px 30 30 30px;
+    -fx-border-color: #f5f5f5;
+    -fx-wrap-text: true;
+    -fx-padding: 5 60 5 2;
+}
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+.text-area .content {
+    -fx-background-color: #f5f5f5;
+}
+.text-area:focused .content {
+    -fx-background-color: transparent;
+
+}
+#lbFriendChat, #lbTime {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15;
+    -fx-text-fill: derive(#b7b7b7, -30%);
+    -fx-alignment: baseline-left;
+}
+#lbSelectAvatar {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 24;
+    -fx-text-fill: #000;
+    -fx-alignment: center;
+}
+.context-menu {
+    -fx-background-color: white;
+    -fx-padding: 0.1em, 0.1em, 0.1em, 0.1em;
+}
+.menu-item {
+    -fx-background-color:white;
+    -fx-padding: 0.5em;
+}
+.menu-item .label {
+    -fx-background-color:white;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 17;
+    -fx-text-fill: #000;
+    -fx-alignment: center;
+}
+.menu-item:hover {
+    -fx-background-color: #1eab5d !important;
+}
+.menu-item:hover .label{
+    -fx-background-color: #1eab5d !important;
+    -fx-text-fill: #fff !important;
+}
+.label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+}
+.list-view .list-cell {
+    -fx-background-color: #fff;
+}
+#convoList .list-cell{
+    -fx-background-color: #f5f5f5;
+}
+#convoList .list-cell:focused{
+    -fx-background-color: #ebebeb;
+}
+#convoList .list-cell:focused #lbFriendName{
+    -fx-font-size: 18;
+}
+
+#btnOption {
+    -fx-background-radius: 30;
+}
+#btnOption:pressed {
+    -fx-background-color: #cdcdcd !important;
+}
+#labelMessage {
+    -fx-background-radius: 20;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #fff;
+    -fx-font-size: 17px;
+}
+#labelMessageFriend {
+    -fx-background-radius: 20;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #000;
+    -fx-font-size: 17px;
+}
+#btnEmoji {
+    -fx-background-radius: 100;
+    -fx-background-color: #dfdfdf;
+}
+#messageBox {
+    -fx-background-color: #f5f5f5;
+    -fx-wrap-text: true;
+}
+#newConvo {
+    -fx-background-radius: 30;
+    -fx-background-color: #ebebeb;
+}
+#newConvo:pressed {
+    -fx-background-color: #cfcfcf !important;
+}
+#defaultAvtNewConvo {
+    -fx-background-radius: 100;
+    -fx-background-color: #dfdfdf;
+}
+#receiverBox {
+    -fx-border-color: transparent;
+}
+#receiverBox:focused {
+    -fx-border-color: transparent !important;
+}
+#receiverBox:hover {
+    -fx-border-color: transparent !important;
+}
+#labelServer{
+    -fx-text-fill: #9c9c9c;
+    -fx-font-size: 14;
+}

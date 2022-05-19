@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="575.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterUIController">
+   <children>
+      <Label layoutX="126.0" prefHeight="47.0" prefWidth="324.0" text="Create a new account" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfFirstName" layoutX="51.0" layoutY="90.0" prefHeight="45.0" prefWidth="221.0" promptText="First name" stylesheets="@../css/Login.css" />
+      <TextField fx:id="tfLastName" layoutX="297.0" layoutY="90.0" prefHeight="45.0" prefWidth="221.0" promptText="Last name" stylesheets="@../css/Login.css" />
+      <TextField fx:id="tfUser" layoutX="50.0" layoutY="150.0" prefHeight="45.0" prefWidth="475.0" promptText="Email address or phone number" stylesheets="@../css/Login.css" />
+      <PasswordField fx:id="pfPassword" layoutX="51.0" layoutY="210.0" prefHeight="45.0" prefWidth="475.0" promptText="New password" stylesheets="@../css/Login.css" />
+      <Label layoutX="51.0" layoutY="262.0" style="-fx-text-fill: #7e7e7e;" text="Date of birth" />
+      <JFXButton fx:id="btnRegister" layoutX="51.0" layoutY="486.0" onMouseClicked="#register" prefHeight="42.0" prefWidth="475.0" stylesheets="@../css/Button_GS_Style.css" text="Register">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpDateOfBirth" defaultColor="#1eab5d" layoutX="50.0" layoutY="290.0" prefHeight="46.0" prefWidth="197.0" promptText="mm/dd/yyyy" showWeekNumbers="true" stylesheets="@../css/Login.css" />
+      <Label layoutX="264.0" layoutY="262.0" style="-fx-text-fill: #7e7e7e;" text="Gender" />
+      <JFXRadioButton fx:id="rbMale" layoutX="264.0" layoutY="291.0" stylesheets="@../css/Login.css" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgGender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rbFemale" layoutX="391.0" layoutY="291.0" stylesheets="@../css/Login.css" text="Female" toggleGroup="$tgGender" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

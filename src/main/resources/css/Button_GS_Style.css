@@ -1,0 +1,27 @@
+.jfx-button {
+    -fx-background-radius: 10;
+    -fx-background-color: #1eab5d;
+    -fx-text-fill: white;
+}
+#btnSignUp {
+    -fx-background-radius: 10;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+#btnSignUp:focused {
+    -fx-background-color: transparent !important;
+}
+#btnForgotPassword {
+    -fx-background-color: transparent;
+    -fx-text-fill: derive(#cdcdcd, -30%);
+    -fx-underline: true;
+}
+#btnSendMessage {
+    -fx-background-color: #fff;
+}
+#btnSendMessage:pressed {
+    -fx-background-color: #C2C2C2 !important;
+}
+/*#btnRegister {*/
+/*    -fx-background-color: #C2C2C2;*/
+/*}*/
